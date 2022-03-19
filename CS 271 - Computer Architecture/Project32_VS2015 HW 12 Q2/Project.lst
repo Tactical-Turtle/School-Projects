@@ -1,0 +1,85 @@
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    12/04/19 15:48:12
+Singer_CS 271_HW12_Q2.asm				     Page 1 - 1
+
+
+				; HW 12
+				;Sum of Fibonacci using a loop
+				; Montana Singer
+
+				.386
+				.model flat,stdcall
+				.stack 4096
+				ExitProcess proto,dwExitCode:dword
+
+ 00000000			.data
+
+ 00000000			.code
+ 00000000			main proc
+
+ 00000000  BE 00000001		    mov esi, 1
+ 00000005  BB 00000000		    mov ebx, 0
+ 0000000A  BA 00000001		    mov edx, 1
+ 0000000F  B9 00000007		    mov ecx, 7
+ 00000014  B8 00000000			mov eax, 0
+
+ 00000019  83 F9 00		Fib: cmp ecx, 0
+ 0000001C  7E 0D			jle next
+ 0000001E  8B F3		    mov esi, ebx
+ 00000020  03 F2		    add esi, edx
+ 00000022  8B DA		    mov ebx, edx
+ 00000024  03 C2			add eax, edx
+ 00000026  8B D6		    mov edx, esi
+ 00000028  49				dec ecx
+ 00000029  EB EE			jmp Fib
+
+ 0000002B			Next:
+				    
+
+
+					invoke ExitProcess,0
+ 0000002B  6A 00	   *	    push   +000000000h
+ 0000002D  E8 00000000 E   *	    call   ExitProcess
+ 00000032			main endp
+				end main 
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    12/04/19 15:48:12
+Singer_CS 271_HW12_Q2.asm				     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 DWord	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000032 DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000032 Public STDCALL
+  Fib  . . . . . . . . . . . . .	L Near	 00000019 _TEXT	
+  Next . . . . . . . . . . . . .	L Near	 0000002B _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors

@@ -1,0 +1,105 @@
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    11/27/19 15:56:07
+Singer_CS 271_HW 11.asm					     Page 1 - 1
+
+
+				; HW 11
+				; Montana Singer
+
+				.386
+				.model flat,stdcall
+				.stack 4096
+				ExitProcess proto,dwExitCode:dword
+
+ 00000000			.data
+ 00000000 0001				val1 sword 1
+ 00000002 0002				val2 sword 2
+ 00000004 0003				val3 sword 3
+
+ 00000000			.code
+ 00000000			main proc
+					;-val2 + 7 - val3 + val1
+
+ 00000000  66| 8B 1D			mov Bx, val2	; Move val2 (2) to eax
+	   00000002 R
+ 00000007  66| F7 DB			neg Bx			; Negate eax, becomes -2
+ 0000000A  66| 83 C3 07			add Bx, 7		; Add 7
+ 0000000E  66| 2B 1D			sub Bx, val3	; Subtract val3 (3)
+	   00000004 R
+ 00000015  66| 03 1D			add Bx, val1	; Add val1 (1)
+	   00000000 R
+					
+					;The value is stored in Bx, in this case it is 3
+
+					;If Bx is positive, store its negative value in Cx
+
+ 0000001C  66| 83 FB 00			cmp Bx, 0			; Compare Bx (3) to 0 (checking if positive)
+ 00000020  7E 08			jle NextInstruction	; If condition is not met (Bx is negative, jump)
+ 00000022  66| 8B CB			mov Cx, Bx			; Store Bx in Cx
+ 00000025  66| F7 D9			neg Cx				; Store negative value of Bx in Cx
+ 00000028  EB 03			jmp Next			
+
+ 0000002A				NextInstruction:
+ 0000002A  66| 8B CB				mov Cx, Bx		; Bx was already negative, so store in Cx
+						
+ 0000002D				Next:
+						;If Cx <= -100, multiply by 10
+ 0000002D  66| 83 F9 9C				cmp Cx, -100	; Compare Cx to -100
+						
+ 00000031  7F 04				jg ValueIsGreaterThan	; Value is greater than -100
+
+ 00000033  66| 6B C9 0A				imul Cx, 10			; Multiply by 10
+
+ 00000037					ValueIsGreaterThan:
+
+
+					invoke ExitProcess,0
+ 00000037  6A 00	   *	    push   +000000000h
+ 00000039  E8 00000000 E   *	    call   ExitProcess
+ 0000003E			main endp
+				end main
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    11/27/19 15:56:07
+Singer_CS 271_HW 11.asm					     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 DWord	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000006 DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000003E DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000003E Public STDCALL
+  NextInstruction  . . . . . . .	L Near	 0000002A _TEXT	
+  Next . . . . . . . . . . . . .	L Near	 0000002D _TEXT	
+  ValueIsGreaterThan . . . . . .	L Near	 00000037 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+val1 . . . . . . . . . . . . . .	Word	 00000000 _DATA	
+val2 . . . . . . . . . . . . . .	Word	 00000002 _DATA	
+val3 . . . . . . . . . . . . . .	Word	 00000004 _DATA	
+
+	   0 Warnings
+	   0 Errors

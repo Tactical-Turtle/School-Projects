@@ -1,0 +1,79 @@
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    12/04/19 15:55:07
+Singer_CS 271_HW12_Q1.asm				     Page 1 - 1
+
+
+				; HW 12
+				;Sum of Fibonacci using a loop
+				; Montana Singer
+
+				.386
+				.model flat,stdcall
+				.stack 4096
+				ExitProcess proto,dwExitCode:dword
+
+ 00000000			.data
+
+ 00000000			.code
+ 00000000			main proc
+
+ 00000000  BE 00000001		    mov esi, 1
+ 00000005  BB 00000000		    mov ebx, 0
+ 0000000A  BA 00000001		    mov edx, 1
+ 0000000F  B9 00000007		    mov ecx, 7
+ 00000014  B8 00000000			mov eax, 0
+
+ 00000019			L1:
+ 00000019  8B F3		    mov esi, ebx
+ 0000001B  03 F2		    add esi, edx
+ 0000001D  8B DA		    mov ebx, edx
+ 0000001F  03 C2			add eax, edx
+ 00000021  8B D6		    mov edx, esi
+ 00000023  E2 F4		    Loop L1
+
+
+					invoke ExitProcess,0
+ 00000025  6A 00	   *	    push   +000000000h
+ 00000027  E8 00000000 E   *	    call   ExitProcess
+ 0000002C			main endp
+				end main 
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    12/04/19 15:55:07
+Singer_CS 271_HW12_Q1.asm				     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 DWord	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000002C DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000002C Public STDCALL
+  L1 . . . . . . . . . . . . . .	L Near	 00000019 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors

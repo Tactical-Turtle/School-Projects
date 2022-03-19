@@ -1,0 +1,108 @@
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    12/08/19 12:52:20
+Singer_CS 271_HW13_Q2.asm				     Page 1 - 1
+
+
+				; HW 13 Q2
+				; Linear search in a given array
+				; Montana Singer
+
+				.386
+				.model flat,stdcall
+				.stack 4096
+				ExitProcess proto,dwExitCode:dword
+
+ 00000000			.data
+ 00000000 00000005		  arrA DWORD 5, -9, 10, 7, 6, -3, 1, 2
+	   FFFFFFF7
+	   0000000A
+	   00000007
+	   00000006
+	   FFFFFFFD
+	   00000001
+	   00000002
+
+ 00000000			.code
+
+ 00000000			main PROC
+
+ 00000000  BF 00000000 R	    mov edi, OFFSET arrA      
+ 00000005  B8 00000000		    mov eax, 0    
+ 0000000A  BB 0000000A			mov ebx, 10		; Value to be searched for
+ 0000000F  BA 00000000			mov edx, 0		; Counter for index
+
+ 00000014  B9 00000008		    mov ecx, LENGTHOF arrA 
+
+ 00000019			    L1:
+ 00000019  42					inc edx
+ 0000001A  8B 07		        mov eax, [edi]      ; Move current arrA element to eax
+
+ 0000001C  3B C3				cmp eax, ebx		; If arrA element = search value, exit loop
+ 0000001E  74 05					je Next
+
+ 00000020  83 C7 04		        add edi, TYPE arrA  ; Next arrA element
+
+ 00000023  E2 F4		        loop L1
+
+ 00000025				Next:
+ 00000025  83 F9 00				cmp ecx, 0
+ 00000028  7E 04					jle NotFound
+
+ 0000002A  8B C2				mov eax, edx		; Target found, load index of target
+ 0000002C  EB 05				jmp ProgramDone
+					
+ 0000002E				NotFound:
+ 0000002E  B8 FFFFFFFF				mov eax, -1			; Target not found, load -1
+
+ 00000033				ProgramDone:
+
+
+					invoke ExitProcess,0
+ 00000033  6A 00	   *	    push   +000000000h
+ 00000035  E8 00000000 E   *	    call   ExitProcess
+ 0000003A			main endp
+				end main 
+Microsoft (R) Macro Assembler Version 14.23.28107.0	    12/08/19 12:52:20
+Singer_CS 271_HW13_Q2.asm				     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 DWord	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000020 DWord	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000003A DWord	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000003A Public STDCALL
+  L1 . . . . . . . . . . . . . .	L Near	 00000019 _TEXT	
+  Next . . . . . . . . . . . . .	L Near	 00000025 _TEXT	
+  NotFound . . . . . . . . . . .	L Near	 0000002E _TEXT	
+  ProgramDone  . . . . . . . . .	L Near	 00000033 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+arrA . . . . . . . . . . . . . .	DWord	 00000000 _DATA	
+
+	   0 Warnings
+	   0 Errors
