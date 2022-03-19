@@ -1,0 +1,120 @@
+Philosopher 0 is thinking.
+Philosopher 4 is thinking.
+Philosopher 3 is thinking.
+Philosopher 1 is thinking.
+Philosopher 2 is thinking.
+Philosopher 3 is hungry.
+Philosopher 3 is eating.
+Philosopher 4 is hungry.
+Philosopher 3 is done eating.
+Philosopher 3 is thinking.
+Philosopher 4 is eating.
+Philosopher 1 is hungry.
+Philosopher 1 is eating.
+Philosopher 2 is hungry.
+Philosopher 4 is done eating.
+Philosopher 4 is thinking.
+Philosopher 0 is hungry.
+Philosopher 3 is hungry.
+Philosopher 1 is done eating.
+Philosopher 1 is thinking.
+Philosopher 2 is eating.
+Philosopher 4 is hungry.
+Philosopher 4 is eating.
+Philosopher 1 is hungry.
+Philosopher 4 is done eating.
+Philosopher 4 is thinking.
+Philosopher 0 is eating.
+Philosopher 2 is done eating.
+Philosopher 2 is thinking.
+Philosopher 3 is eating.
+Philosopher 4 is hungry.
+Philosopher 0 is done eating.
+Philosopher 0 is thinking.
+Philosopher 1 is eating.
+Philosopher 2 is hungry.
+Philosopher 3 is done eating.
+Philosopher 3 is thinking.
+Philosopher 4 is eating.
+Philosopher 4 is done eating.
+Philosopher 4 is thinking.
+Philosopher 3 is hungry.
+Philosopher 0 is hungry.
+Philosopher 1 is done eating.
+Philosopher 1 is thinking.
+Philosopher 2 is eating.
+Philosopher 4 is hungry.
+Philosopher 4 is eating.
+Philosopher 4 is done eating.
+Philosopher 4 is thinking.
+Philosopher 0 is eating.
+Philosopher 2 is done eating.
+Philosopher 2 is thinking.
+Philosopher 3 is eating.
+Philosopher 1 is hungry.
+Philosopher 3 is done eating.
+Philosopher 3 is thinking.
+Philosopher 2 is hungry.
+Philosopher 0 is done eating.
+Philosopher 0 is thinking.
+Philosopher 1 is eating.
+Philosopher 4 is hungry.
+Philosopher 3 is hungry.
+Philosopher 3 is eating.
+Philosopher 0 is hungry.
+Philosopher 3 is done eating.
+Philosopher 3 is thinking.
+Philosopher 4 is eating.
+Philosopher 1 is done eating.
+Philosopher 1 is thinking.
+Philosopher 2 is eating.
+Philosopher 4 is done eating.
+Philosopher 4 is thinking.
+Philosopher 0 is eating.
+Philosopher 3 is hungry.
+Philosopher 1 is hungry.
+Philosopher 2 is done eating.
+Philosopher 2 is thinking.
+Philosopher 3 is eating.
+Philosopher 4 is hungry.
+Philosopher 0 is done eating.
+Philosopher 0 is thinking.
+Philosopher 1 is eating.
+Philosopher 1 is done eating.
+Philosopher 1 is thinking.
+Philosopher 3 is done eating.
+Philosopher 3 is thinking.
+Philosopher 4 is eating.
+Philosopher 2 is hungry.
+Philosopher 0 is hungry.
+Philosopher 1 is hungry.
+Philosopher 1 is eating.
+Philosopher 3 is hungry.
+Philosopher 4 is done eating.
+Philosopher 4 is thinking.
+Philosopher 0 is eating.
+Philosopher 1 is done eating.
+Philosopher 1 is thinking.
+Philosopher 2 is eating.
+Philosopher 0 is done eating.
+Philosopher 0 is thinking.
+Philosopher 4 is hungry.
+Philosopher 2 is done eating.
+Philosopher 3 is eating.
+Philosopher 1 is hungry.
+Philosopher 3 is done eating.
+Philosopher 4 is eating.
+Philosopher 0 is hungry.
+Philosopher 4 is done eating.
+Philosopher 0 is eating.
+Philosopher 0 is done eating.
+Philosopher 1 is eating.
+Philosopher 1 is done eating.
+Philosopher 0 meals eaten: 5
+Philosopher 1 meals eaten: 6
+Philosopher 2 meals eaten: 4
+Philosopher 3 meals eaten: 6
+Philosopher 4 meals eaten: 7
+Max meals: 7
+Min meals: 4
+Avg meals: 5.600
