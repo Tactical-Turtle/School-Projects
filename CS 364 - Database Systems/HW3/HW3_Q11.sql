@@ -1,0 +1,1 @@
+SELECT OrderLine_T.ProductID, Product_T.ProductStandardPrice, Sum(OrderLine_T.OrderedQuantity)* Product_T.ProductStandardPrice AS TotalPrice FROM Product_T, OrderLine_T WHERE Product_T.ProductID = OrderLine_T.ProductID GROUP BY OrderLine_T.ProductID, Product_T.ProductStandardPrice, OrderLine_T.OrderID HAVING OrderLine_T.OrderID=1;

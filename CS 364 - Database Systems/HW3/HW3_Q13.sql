@@ -1,0 +1,1 @@
+SELECT CUST.CustomerID, CustomerName, OrderID FROM Customer_T CUST LEFT OUTER JOIN Order_T ORD ON CUST.CustomerID = ORD.CustomerID ORDER BY CUST.CustomerID;
