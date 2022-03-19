@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Homework 3</h1>
+
+    <form>
+      <div class="mb-3">
+        <legend>Your Details:</legend>
+        <label for="name" class="form-label">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          required
+          oninvalid="this.setCustomValidity('Enter Name Here')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          required
+          oninvalid="this.setCustomValidity('Enter Email Here')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+
+      <fieldset>
+        <legend>Your Review:</legend>
+        <label for="foundthrough">How did you hear about us?:</label>
+        <select name="foundthrough" class="form-select" id="foundthrough">
+          <option value="google">Google</option>
+          <option value="friend">Friend</option>
+          <option value="advert">Advert</option>
+          <option value="other">Other</option>
+        </select>
+        <br />
+
+        <p>Would you visit again?</p>
+        <input
+          class="form-check-input"
+          type="radio"
+          id="yes"
+          name="visit"
+          value="Yes"
+          required
+        />
+        <label for="yes">Yes</label>
+        <input
+          class="form-check-input"
+          type="radio"
+          id="no"
+          name="visit"
+          value="No"
+        />
+        <label for="no">No</label>
+        <input
+          class="form-check-input"
+          type="radio"
+          id="maybe"
+          name="visit"
+          value="Maybe"
+        />
+        <label for="maybe">Maybe</label><br />
+        <br />
+
+        <p>Comments:</p>
+        <textarea
+          class="form-control"
+          id="comments"
+          name="comments"
+          rows="4"
+          cols="30"
+        ></textarea>
+        <br /><br />
+
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="signup"
+          name="signup"
+          value="Signup"
+        />
+        <label for="signup"> Sign me up for email updates</label><br />
+        <br />
+        <button type="submit" class="btn btn-primary">Submit review</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

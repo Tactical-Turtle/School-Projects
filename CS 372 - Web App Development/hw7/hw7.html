@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Homework 7</title>
+    <meta name="description" content="A simple, basic calculator." />
+
+    <link rel="stylesheet" href="css/homepage.css" />
+  </head>
+
+  <body>
+    <form class="form-container" onsubmit="doNothing(); return false">
+      <div class="calculator-input">
+        <label>Number 1:</label>
+        <input type="number" id="number1" step="any" required />
+      </div>
+
+      <div class="operator">
+        <select id="operator" required>
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+        </select>
+      </div>
+
+      <div class="calculator-input">
+        <label>Number 2:</label>
+        <input type="number" id="number2" step="any" required />
+      </div>
+
+      <div class="calculate">
+        <button type="submit" id="calculate-button">Calculate</button>
+      </div>
+
+      <div class="result">
+        <label>Result:</label>
+        <input type="text" id="result" readonly />
+      </div>
+    </form>
+
+    <script type="text/javascript" src="js/calculator.js"></script>
+  </body>
+</html>

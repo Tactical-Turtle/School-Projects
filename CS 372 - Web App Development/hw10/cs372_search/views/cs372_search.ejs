@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+       * {
+        margin-top: 1%;
+        margin-left: 5%;
+      } 
+      
+      b{
+        margin-left: 0;
+      }
+
+      #search-form{
+        width: 50%;
+      }
+      
+      button{
+        margin-top: 2%;
+      }
+
+      p{
+        white-space: pre-wrap;
+      }
+
+      #text{
+        white-space:normal;
+      }
+
+      #delete-form{
+        margin-top: 0;
+        margin-left: 5%;
+        white-space:normal;
+      }
+      #deleteButton{
+        margin-top: 0.5%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>CS 372 Search</h1>
+    <form action="/" method="post" id="search-form">
+      <input
+        type="text"
+        id="searchBox"
+        class="form-control"
+        name="searchBox"
+        placeholder="CS 372 Search"
+      />
+
+      <button
+        type="submit"
+        id="searchButton"
+        class="btn btn-primary"
+        action="server.js"
+        name="searchButton"
+        value="search"
+        >CS 372 Search
+      </button>
+
+      <button
+        type="submit"
+        id="historyButton"
+        class="btn btn-secondary"
+        action="server.js"
+        name="historyButton"
+        value="history"
+        >History
+        </button>
+    </form>
+
+    <form action="/history" method="post" id="delete-form">
+      <button
+      type="submit"
+      id="deleteButton"
+      class="btn btn-danger"
+      action="server.js"
+      name="deleteButton"
+      value="delete"
+      >Delete History
+      </button>
+    </form>
+
+
+    <!-- Display temperature data -->
+    <form>
+      <% if(weather !== null)
+      { %>
+        <p><%= weather %></p>
+      <% } %>
+
+      <% if(error !== null)
+      { %>
+        <p><%= error %></p>
+      <% } %>
+    </form>
+
+    <!-- Display search history -->
+    <form id="display-history">
+      <% if(history !== null)
+      { %>
+        <p>Search History:
+           Total queries: <b><%= numberOfSearches %></b></p>
+        <p><%= history %></p>
+      <% } %>
+    </form>
+
+  </body>
+</html>

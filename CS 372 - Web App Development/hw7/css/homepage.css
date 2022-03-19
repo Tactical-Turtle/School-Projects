@@ -1,0 +1,30 @@
+input:invalid {
+  border: 2px solid red;
+}
+
+input:required:valid {
+  border: 2px solid limegreen;
+}
+
+div {
+  margin: 1%;
+  padding: 0.5%;
+}
+
+div.operator {
+  margin-left: 10%;
+}
+
+div.calculate {
+  margin-left: 7.5%;
+}
+
+input:required:focus:valid {
+  background: url("../images/ThumbsUp.png") no-repeat 85% 50% lightgreen;
+  background-size: 25px;
+}
+
+input:focus:invalid {
+  background: url("../images/Alert.png") no-repeat 85% 50% lightsalmon;
+  background-size: 25px;
+}
