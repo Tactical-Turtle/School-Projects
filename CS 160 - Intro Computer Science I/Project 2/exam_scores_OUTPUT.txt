@@ -1,0 +1,14 @@
+Exam Statistics
+
+Total: 60
+Average score: 69.33
+Population standard deviation of the scores: 17.80
+
+# of A, 85-100:  9  15.00%
+# of B, 75--84:  18  30.00%
+# of C, 65--74:  15  25.00%
+# of D, 55--64:  8  13.33%
+# of F, 00--54:  10  16.67%
+
+Minimum score: 16
+Maximum score: 100
