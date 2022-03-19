@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@AccountInfo.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AccountInfo">
+   <children>
+      <Button layoutX="798.0" layoutY="22.0" mnemonicParsing="false" text="Delete" />
+      <Button layoutX="691.0" layoutY="22.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Save Changes " />
+      <Label layoutX="459.0" layoutY="45.0" prefHeight="25.0" prefWidth="94.0" text="Account Info:" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="560.0" layoutY="78.0" prefHeight="27.0" prefWidth="304.0" />
+      <TextField layoutX="560.0" layoutY="124.0" prefHeight="27.0" prefWidth="304.0" />
+      <Label layoutX="495.0" layoutY="129.0" prefHeight="17.0" prefWidth="59.0" text="Password:" />
+      <Label layoutX="473.0" layoutY="171.0" prefHeight="25.0" prefWidth="84.0" text="Account Type:" />
+      <ChoiceBox layoutX="561.0" layoutY="170.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="497.0" layoutY="256.0" prefHeight="20.0" prefWidth="129.0" text="Assigned Patients:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="50.0" prefHeight="20.0" prefWidth="94.0" text="Personal Info">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="118.0" layoutY="78.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="118.0" layoutY="124.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="118.0" layoutY="170.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="118.0" layoutY="214.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="118.0" layoutY="250.0" prefHeight="27.0" prefWidth="185.0" />
+      <TextField layoutX="118.0" layoutY="294.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="118.0" layoutY="332.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="117.0" layoutY="369.0" prefHeight="27.0" prefWidth="118.0" />
+      <TextField layoutX="119.0" layoutY="412.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="118.0" layoutY="453.0" prefHeight="27.0" prefWidth="251.0" />
+      <TextField layoutX="118.0" layoutY="494.0" prefHeight="27.0" prefWidth="251.0" />
+      <ListView fx:id="listView" layoutX="506.0" layoutY="298.0" prefHeight="187.0" prefWidth="376.0" />
+      <Label layoutX="55.0" layoutY="175.0" prefHeight="17.0" prefWidth="104.0" text="First Name:" />
+      <Label layoutX="42.0" layoutY="129.0" prefHeight="17.0" prefWidth="104.0" text="Middle Initial:" />
+      <Label layoutX="55.0" layoutY="83.0" prefHeight="17.0" prefWidth="104.0" text="Last Name:" />
+      <Label layoutX="84.0" layoutY="219.0" prefHeight="17.0" prefWidth="104.0" text="SSN:" />
+      <Label layoutX="42.0" layoutY="255.0" prefHeight="17.0" prefWidth="104.0" text="Date of Birth:" />
+      <Label layoutX="55.0" layoutY="299.0" prefHeight="17.0" prefWidth="104.0" text="Address 1:" />
+      <Label layoutX="55.0" layoutY="337.0" prefHeight="17.0" prefWidth="104.0" text="Address 2:" />
+      <Label layoutX="32.0" layoutY="374.0" prefHeight="17.0" prefWidth="104.0" text="City, State, Zip:" />
+      <Label layoutX="55.0" layoutY="417.0" prefHeight="17.0" prefWidth="104.0" text="Phone(cell):" />
+      <Label layoutX="42.0" layoutY="458.0" prefHeight="17.0" prefWidth="104.0" text="Phone(work):" />
+      <Label layoutX="84.0" layoutY="499.0" prefHeight="17.0" prefWidth="104.0" text="Email:" />
+      <Label layoutX="309.0" layoutY="255.0" prefHeight="17.0" prefWidth="24.0" text="Sex:" />
+      <ChoiceBox layoutX="333.0" layoutY="251.0" prefHeight="25.0" prefWidth="38.0" />
+      <TextField layoutX="244.0" layoutY="369.0" prefHeight="27.0" prefWidth="38.0" />
+      <TextField layoutX="294.0" layoutY="369.0" prefHeight="27.0" prefWidth="76.0" />
+      <Button layoutX="824.0" layoutY="495.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Add" />
+      <Button layoutX="653.0" layoutY="532.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Remove Selected" />
+      <TextField layoutX="610.0" layoutY="494.0" prefHeight="27.0" prefWidth="203.0" />
+      <Label layoutX="495.0" layoutY="79.0" prefHeight="25.0" prefWidth="59.0" text="Username:" />
+      <Line endX="168.0" fill="#a4a3a3" layoutX="219.0" layoutY="59.0" startX="-93.0" startY="1.0" />
+      <Line endX="-109.5" endY="511.0" fill="#a4a3a3" layoutX="497.0" layoutY="58.0" startX="-109.5" startY="1.5" />
+      <Line endX="168.0" fill="#a4a3a3" layoutX="219.0" layoutY="569.0" startX="-204.0" />
+      <Line endX="-107.5" endY="509.0" fill="#a4a3a3" layoutX="122.0" layoutY="60.0" startX="-108.0" />
+      <Line endX="-89.0" endY="-0.5" fill="#a4a3a3" layoutX="121.0" layoutY="59.0" startX="-108.0" />
+      <Line endX="288.0" endY="0.5" fill="#a4a3a3" layoutX="614.0" layoutY="227.0" startX="-163.0" startY="0.5" />
+      <Line endX="258.0" endY="0.5" fill="#a4a3a3" layoutX="645.0" layoutY="567.0" startX="-194.0" />
+      <Line endX="-114.5" endY="375.5" fill="#a4a3a3" layoutX="565.0" layoutY="193.0" startX="-114.5" startY="73.0" />
+      <Line endX="191.0" fill="#a4a3a3" layoutX="712.0" layoutY="265.0" startX="-82.0" />
+      <Line endX="-106.5" endY="298.0" fill="#a4a3a3" layoutX="1010.0" layoutY="269.0" startX="-106.5" startY="-4.5" />
+      <Line endX="-70.0" fill="#a4a3a3" layoutX="559.0" layoutY="264.0" startX="-108.0" />
+      <Line endX="244.0" endY="-2.0" fill="#a4a3a3" layoutX="658.0" layoutY="60.0" startX="-87.0" startY="-2.5" />
+      <Line endX="-107.5" endY="163.0" fill="#a4a3a3" layoutX="1010.0" layoutY="64.0" startX="-107.5" startY="-5.5" />
+      <Line endX="-111.5" endY="45.0" fill="#a4a3a3" layoutX="562.0" layoutY="182.0" startX="-111.5" startY="-124.0" />
+      <Button fx:id="backButton" layoutX="16.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleBackEvent" text="Back" />
+   </children>
+</AnchorPane>

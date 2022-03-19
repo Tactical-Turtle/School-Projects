@@ -1,0 +1,10 @@
+.root{
+    -fx-background-color: white;
+}
+.text-field{
+    -fx-border-color: black;
+}
+.button{
+    -fx-border-color: black;
+    -fx-background-color: lightblue;
+}

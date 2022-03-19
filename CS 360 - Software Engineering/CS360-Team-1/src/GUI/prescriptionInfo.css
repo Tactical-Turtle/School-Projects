@@ -1,0 +1,14 @@
+.button{
+    -fx-background-radius: 0;
+    -fx-background-color: lightblue;
+}
+.text-field{
+    -fx-border-color: black;
+}
+.text-area{
+    -fx-border-color: black;
+}
+.choice-box{
+    -fx-background-color: white;
+    -fx-border-color: black;
+}

@@ -1,0 +1,5 @@
+.button:hover, .button:focused {
+    -fx-background-color: lightblue;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

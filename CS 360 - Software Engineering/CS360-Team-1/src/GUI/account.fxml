@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@account.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.account">
+   <children>
+      <TextField fx:id="filterField" layoutX="658.0" layoutY="74.0" prefHeight="25.0" prefWidth="191.0" />
+      <TableView fx:id="tableview" layoutX="73.0" layoutY="130.0">
+        <columns>
+          <TableColumn fx:id="col_last" prefWidth="111.199951171875" text="Last Name" />
+          <TableColumn fx:id="col_first" prefWidth="125.60003662109375" text="First Name" />
+
+            <TableColumn fx:id="col_acc" prefWidth="148.0" text="Account Type" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="filterComboBox" layoutX="484.0" layoutY="74.0" prefWidth="150.0" promptText="Select Choice" />
+      <Button fx:id="returnButton" layoutX="871.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleReturnEvent" text="Return" />
+   </children>
+</Pane>

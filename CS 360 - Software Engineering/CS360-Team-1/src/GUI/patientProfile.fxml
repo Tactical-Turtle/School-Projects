@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.patientProfile">
+   <children>
+      <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@patientprofilecss.css">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1ffffb00" height="187.0" layoutX="552.0" layoutY="218.0" stroke="#00000043" strokeType="INSIDE" styleClass="patientprofile2" width="286.0" />
+            <TextField fx:id="lastnamefield" layoutX="194.0" layoutY="120.0" />
+            <TextField fx:id="middleField" layoutX="194.0" layoutY="152.0" />
+            <TextField fx:id="firstnameField" layoutX="194.0" layoutY="187.0" />
+            <TextField fx:id="ssnField" layoutX="194.0" layoutY="218.0" />
+            <TextField fx:id="dateOfBirthField" layoutX="194.0" layoutY="249.0" prefHeight="25.0" prefWidth="72.0" />
+            <TextField fx:id="address1Field" layoutX="194.0" layoutY="298.0" prefHeight="25.0" prefWidth="355.0" />
+            <TextField fx:id="address2Field" layoutX="194.0" layoutY="332.0" prefHeight="25.0" prefWidth="355.0" />
+            <TextField fx:id="cszField" layoutX="195.0" layoutY="368.0" prefHeight="25.0" prefWidth="355.0" />
+            <TextField fx:id="doctorField" layoutX="194.0" layoutY="468.0" prefHeight="25.0" prefWidth="355.0" />
+            <TextField fx:id="cellField" layoutX="642.0" layoutY="120.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextArea fx:id="notesFIeld" layoutX="194.0" layoutY="500.0" prefHeight="114.0" prefWidth="640.0" />
+            <Label layoutX="111.0" layoutY="123.0" prefHeight="17.0" prefWidth="88.0" text="Last Name:" />
+            <Label layoutX="95.0" layoutY="155.0" text="Middle Initial:" />
+            <Label layoutX="111.0" layoutY="190.0" text="First Name:" />
+            <Label layoutX="161.0" layoutY="221.0" text="SSN:" />
+            <Label layoutX="104.0" layoutY="255.0" text="Date of Birth:" />
+            <Label layoutX="121.0" layoutY="301.0" text="Address 1:" />
+            <Label layoutX="121.0" layoutY="335.0" text="Address 2:" />
+            <Label layoutX="91.0" layoutY="371.0" text="City, State, Zip:" />
+            <Label layoutX="121.0" layoutY="404.0" text="First Visit: " />
+            <Label layoutX="118.0" layoutY="441.0" text="OutPatient:" />
+            <Label layoutX="88.0" layoutY="471.0" text="Primary Doctor:" />
+            <Label layoutX="148.0" layoutY="500.0" text="Notes:" />
+            <Label layoutX="268.0" layoutY="253.0" text="Sex:" />
+            <ChoiceBox fx:id="sexBox" layoutX="295.0" layoutY="250.0" prefHeight="25.0" prefWidth="46.0" />
+            <ImageView fitHeight="180.0" fitWidth="200.0" layoutX="349.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@patientImage.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="workField" layoutX="642.0" layoutY="152.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="emailField" layoutX="641.0" layoutY="187.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="emnameField" layoutX="642.0" layoutY="263.0" prefHeight="25.0" prefWidth="192.0" />
+            <Label layoutX="553.0" layoutY="123.0" prefHeight="17.0" prefWidth="88.0" text="Phone(cell):" />
+            <Label layoutX="543.0" layoutY="155.0" prefHeight="17.0" prefWidth="88.0" text="Phone(work):" />
+            <Label layoutX="593.0" layoutY="190.0" prefHeight="21.0" prefWidth="43.0" text="Email:" />
+            <Label layoutX="560.0" layoutY="218.0" prefHeight="25.0" prefWidth="201.0" text="Emergency Contact:" />
+            <Label layoutX="587.0" layoutY="267.0" prefHeight="17.0" prefWidth="54.0" text="Name:" />
+            <Label layoutX="581.0" layoutY="301.0" prefHeight="21.0" prefWidth="67.0" text="Relation:" />
+            <Label layoutX="560.0" layoutY="335.0" prefHeight="17.0" prefWidth="88.0" text="Phone(cell):" />
+            <Label layoutX="553.0" layoutY="371.0" prefHeight="21.0" prefWidth="103.0" text="Phone(work):" />
+            <Label layoutX="553.0" layoutY="405.0" prefHeight="17.0" prefWidth="88.0" text="Allergies:" />
+            <TextArea fx:id="allergiesField" layoutX="623.0" layoutY="407.0" prefHeight="86.0" prefWidth="213.0" />
+            <TextField fx:id="emrelationField" layoutX="642.0" layoutY="298.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="emcellField" layoutX="642.0" layoutY="332.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="emworkField" layoutX="642.0" layoutY="368.0" prefHeight="25.0" prefWidth="192.0" />
+            <DatePicker fx:id="firstvisitDate" layoutX="194.0" layoutY="401.0" prefHeight="25.0" prefWidth="149.0" />
+            <Label layoutX="342.0" layoutY="404.0" prefHeight="21.0" prefWidth="67.0" text="Last Visit:" />
+            <DatePicker fx:id="lastvisitDate" layoutX="407.0" layoutY="401.0" prefHeight="27.0" prefWidth="143.0" />
+            <ChoiceBox layoutX="194.0" layoutY="436.0" prefWidth="150.0" />
+            <Label layoutX="348.0" layoutY="440.0" text="Room #:" />
+            <TextField fx:id="roomField" layoutX="401.0" layoutY="438.0" prefHeight="27.0" prefWidth="149.0" />
+            <Button fx:id="deleteButton" layoutX="781.0" layoutY="81.0" mnemonicParsing="false" onAction="#handledeleteEvent" text="Delete" />
+            <Button fx:id="saveButton" layoutX="677.0" layoutY="82.0" mnemonicParsing="false" onAction="#handlesaveEvent" text="Save Changes" />
+            <Button fx:id="prescriptionButton" layoutX="548.0" layoutY="82.0" mnemonicParsing="false" onAction="#handlewriteEvent" text="Write Prescription" />
+            <Button fx:id="backButton" layoutX="111.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleBackEvent" text="Back" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

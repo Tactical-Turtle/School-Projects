@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.appointmentList">
+   <children>
+      <TableView fx:id="tableview" layoutX="44.0" layoutY="97.0" prefHeight="660.0" prefWidth="897.0">
+        <columns>
+          <TableColumn fx:id="col_date" prefWidth="101.0" text="Date" />
+          <TableColumn fx:id="col_time" prefWidth="118.0" text="Time" />
+            <TableColumn fx:id="col_patient" prefWidth="227.0" text="Patient" />
+            <TableColumn fx:id="col_details" prefWidth="450.0" text="Details" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="apptBox" layoutX="44.0" layoutY="57.0" prefWidth="150.0" promptText="Appointment Time" />
+      <TextField fx:id="filterField" layoutX="493.0" layoutY="57.0" prefHeight="25.0" prefWidth="447.0" />
+   </children>
+</Pane>
